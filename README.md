@@ -1,6 +1,6 @@
 # s3-backfiller
 
-* [Processing Millions of Amazon S3 Objects](https://www.michaelsambol.com/blogs/processing_millions_of_amazon_s3_objects.html)
+* [Process Millions of Amazon S3 Objects](https://www.michaelsambol.com/blogs/process_millions_of_s3_objects.html)
 
 ## Architecture
 
