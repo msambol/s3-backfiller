@@ -43,7 +43,7 @@ def handler(event, context):
                         failed_keys.append(key)
                         continue
 
-                    # RECOMMENED: delete original file after it's moved to a new prefix
+                    # RECOMMENDED: delete original file after it's moved to a new prefix
                     # TODO: switch Lambda environment variable to True (defaults to False for safety)
                     if DELETE_ORIGINAL_FILES:
                         try:
