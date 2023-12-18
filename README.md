@@ -40,7 +40,7 @@ Invoking the state machine:
 {
     "bucket": "<S3 BUCKET NAME>",
     "prefix": "<S3_PREFIX_WITH_FORWARD_SLASH>",
-    "page_size": <Integer between 1 and 100>, // defaults to 500
+    "page_size": <Integer between 1 and 1000>, // defaults to 500
     "queue_url": "<SQS_QUEUE_URL>" // defaults to queue deployed by CDK code
 }
 ```
