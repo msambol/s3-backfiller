@@ -39,7 +39,7 @@ def handler(event, context):
                         bucket_object.copy(copy_source, new_obj_name)
                         print(f'Copied file to processed location: s3://{bucket}/{new_obj_name}')
                     except Exception as e:
-                        print(f'Failed copying file to processed S3 location ({key}): {e}')
+                        print(f'Failed copying file to processed S3 location ({key}): {str(e)}')
                         failed_keys.append(key)
                         continue
 
@@ -50,16 +50,16 @@ def handler(event, context):
                             s3r.Object(bucket, key).delete()
                             print('Deleted file from original S3 location')
                         except Exception as e:
-                            print(f'Failed deleting file from original S3 location ({key}): {e}')
+                            print(f'Failed deleting file from original S3 location ({key}): {str(e)}')
                             failed_keys.append(key)
                             continue
 
                 except Exception as e:
-                    print(f'Failed processing S3 object: {3}')
+                    print(f'Failed processing S3 object: {str(e)}')
                     failed_keys.append(key)
 
         except Exception as e:
-            print(e)
+            print(str(e))
             raise Exception('Failed loading body from record')
         
     if len(failed_keys):
